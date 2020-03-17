@@ -14,8 +14,15 @@ attr_writer :name
     return @stomach.size()
   end
 
-  def bear_eats_fish_from_river(fish)
+  def add_fish_to_stomach(fish)
     @stomach.push(fish)
+  end
+
+  def remove_fish_from_stomach()
+    # We remove the first fish in the stomach array
+    # as fishes will be digested in order they were
+    # eaten
+    @stomach.shift()
   end
 
 end
