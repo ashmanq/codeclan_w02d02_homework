@@ -38,6 +38,11 @@ class BearTest < MiniTest::Test
     assert_equal(0, @bear.stomach_content())
   end
 
+  #----------Extensions------------------------------------
+  def test_bear_roar()
+    assert_equal("Roar!!!", @bear.roar())
+  end
+
   # Test for when a bear eats a fish from the river
   def test_bear_gets_fish_from_river()
     @bear.add_fish_to_stomach(@fish)
@@ -49,4 +54,6 @@ class BearTest < MiniTest::Test
     @bear.remove_fish_from_stomach()
     assert_equal(0, @bear.stomach_content)
   end
+
+
 end

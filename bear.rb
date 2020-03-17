@@ -25,4 +25,8 @@ attr_writer :name
     @stomach.shift()
   end
 
+  def roar()
+    return "Roar!!!"
+  end
+
 end

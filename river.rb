@@ -13,4 +13,19 @@ class River
     return @fishes.size()
   end
 
+  def remove_fish(fish)
+    @fishes.delete(fish)
+  end
+
+  def add_fish(fish)
+    @fishes.push(fish)
+  end
+
+  def bear_takes_fish(bear, fish)
+    @fishes.delete(fish)
+    bear.add_fish_to_stomach(fish)    
+  end
+
+
+
 end
