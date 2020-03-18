@@ -1,5 +1,6 @@
 require("minitest/autorun")
 require('minitest/reporters')
+require_relative("../river")
 require_relative("../bear")
 require_relative("../fish")
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
@@ -45,7 +46,8 @@ class BearTest < MiniTest::Test
 
   # Test for when a bear eats a fish from the river
   def test_bear_gets_fish_from_river()
-    @bear.add_fish_to_stomach(@fish)
+    river = River.new("Clyde", [@fish_1, @fish_1])
+    @bear.add_fish_to_stomach(river)
     assert_equal(1, @bear.stomach_content)
   end
 

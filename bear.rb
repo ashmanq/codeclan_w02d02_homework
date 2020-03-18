@@ -18,7 +18,13 @@ attr_writer :name
     @stomach.push(fish)
   end
 
-  def remove_fish_from_stomach()
+  def take_fish(river)
+    fish = river.lose_fish()
+    add_fish_to_stomach(fish)
+  end
+
+
+  def remove_fish_from_stomach(river)
     # We remove the first fish in the stomach array
     # as fishes will be digested in order they were
     # eaten
